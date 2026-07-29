@@ -44,6 +44,16 @@
   backdrop-filter: blur(10px);
 }
 
+#topo,
+#about,
+#experience,
+#timeline,
+#articles,
+#contact,
+#conteudo {
+  scroll-margin-top: 5rem;
+}
+
 .header-inner {
   display: flex;
   align-items: center;

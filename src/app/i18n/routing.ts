@@ -79,6 +79,15 @@ export function buildPath(lang: Lang, section: SectionKey = 'home'): string {
   return `/${prefix}/${SECTION_SLUGS[lang][section]}`;
 }
 
+/** Comandos para [routerLink] — string única com "/" quebra a navegação no Angular. */
+export function buildCommands(lang: Lang, section: SectionKey = 'home'): string[] {
+  const prefix = LANG_PREFIX[lang];
+  if (section === 'home') {
+    return ['/', prefix];
+  }
+  return ['/', prefix, SECTION_SLUGS[lang][section]];
+}
+
 export function allPrerenderRoutes(): string[] {
   const routes: string[] = [];
 

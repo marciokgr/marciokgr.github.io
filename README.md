@@ -6,15 +6,15 @@ Página pessoal em Angular com biografia, experiências, timeline profissional e
 
 ## URLs e idiomas
 
-Rotas amigáveis para SEO:
+Uma página por idioma; o menu usa âncoras na mesma página:
 
-| Idioma | Home | Sobre |
-|--------|------|-------|
-| PT | `/pt-br` | `/pt-br/sobre` |
-| EN | `/en` | `/en/about` |
-| ES | `/es` | `/es/sobre` |
+| Idioma | URL |
+|--------|-----|
+| PT | `/pt-br` |
+| EN | `/en` |
+| ES | `/es` |
 
-Também existem rotas para experiência, timeline, artigos e contato.
+Exemplo de seção: `/pt-br#experience`
 
 ## Desenvolvimento
 

@@ -12,9 +12,10 @@ export const routes: Routes = [
     path: ':lang',
     component: HomeComponent,
   },
+  // URLs antigas de seção → página do idioma (menu usa âncoras)
   {
     path: ':lang/:section',
-    component: HomeComponent,
+    redirectTo: ':lang',
   },
   {
     path: '**',

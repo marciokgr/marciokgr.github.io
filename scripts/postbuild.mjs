@@ -6,26 +6,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const browserDir = join(__dirname, '..', 'dist', 'portfolio', 'browser');
 const siteUrl = 'https://marciokgr.github.io';
 
-const routes = [
-  '/pt-br',
-  '/pt-br/sobre',
-  '/pt-br/experiencia',
-  '/pt-br/timeline',
-  '/pt-br/artigos',
-  '/pt-br/contato',
-  '/en',
-  '/en/about',
-  '/en/experience',
-  '/en/timeline',
-  '/en/articles',
-  '/en/contact',
-  '/es',
-  '/es/sobre',
-  '/es/experiencia',
-  '/es/timeline',
-  '/es/articulos',
-  '/es/contacto',
-];
+const routes = ['/pt-br', '/en', '/es'];
 
 if (!existsSync(browserDir)) {
   console.error('Build output not found:', browserDir);
@@ -41,18 +22,12 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 ${routes
   .map((route) => {
     const loc = `${siteUrl}${route}`;
-    const parts = route.split('/').filter(Boolean);
-    const prefix = parts[0];
-    const section = parts[1] ?? '';
-
-    const alternates = [
-      ['pt-BR', sectionPath('pt-br', section, 'pt')],
-      ['en', sectionPath('en', section, 'en')],
-      ['es', sectionPath('es', section, 'es')],
-      ['x-default', sectionPath('pt-br', section, 'pt')],
-    ];
-
-    const xhtml = alternates
+    const xhtml = [
+      ['pt-BR', '/pt-br'],
+      ['en', '/en'],
+      ['es', '/es'],
+      ['x-default', '/pt-br'],
+    ]
       .map(
         ([hreflang, path]) =>
           `    <xhtml:link rel="alternate" hreflang="${hreflang}" href="${siteUrl}${path}" />`
@@ -79,54 +54,3 @@ Sitemap: ${siteUrl}/sitemap.xml
 writeFileSync(join(browserDir, 'robots.txt'), robots, 'utf8');
 
 console.log('Postbuild complete: 404.html, sitemap.xml, robots.txt');
-
-function sectionPath(langPrefix, sectionSlug, lang) {
-  const map = {
-    pt: {
-      sobre: 'sobre',
-      experiencia: 'experiencia',
-      timeline: 'timeline',
-      artigos: 'artigos',
-      contato: 'contato',
-      about: 'sobre',
-      experience: 'experiencia',
-      articles: 'artigos',
-      contact: 'contato',
-      articulos: 'artigos',
-      contacto: 'contato',
-    },
-    en: {
-      sobre: 'about',
-      experiencia: 'experience',
-      timeline: 'timeline',
-      artigos: 'articles',
-      contato: 'contact',
-      about: 'about',
-      experience: 'experience',
-      articles: 'articles',
-      contact: 'contact',
-      articulos: 'articles',
-      contacto: 'contact',
-    },
-    es: {
-      sobre: 'sobre',
-      experiencia: 'experiencia',
-      timeline: 'timeline',
-      artigos: 'articulos',
-      contato: 'contacto',
-      about: 'sobre',
-      experience: 'experiencia',
-      articles: 'articulos',
-      contact: 'contacto',
-      articulos: 'articulos',
-      contacto: 'contacto',
-    },
-  };
-
-  if (!sectionSlug) {
-    return `/${langPrefix}`;
-  }
-
-  const localized = map[lang][sectionSlug] ?? sectionSlug;
-  return `/${langPrefix}/${localized}`;
-}

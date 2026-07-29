@@ -1,8 +1,8 @@
-<a class="skip-link" [routerLink]="path('home')" fragment="conteudo">{{ t().skipLink }}</a>
+<a class="skip-link" href="#conteudo" (click)="goToSection($event, 'conteudo')">{{ t().skipLink }}</a>
 
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" [routerLink]="path('home')" (click)="closeMenu()">{{ t().profile.name }}</a>
+    <a class="brand" href="#topo" (click)="goToSection($event, 'topo')">{{ t().profile.name }}</a>
 
     <nav
       id="nav-principal"
@@ -10,11 +10,11 @@
       [class.open]="menuOpen"
       [attr.aria-label]="t().navAria"
     >
-      <a [routerLink]="path('about')" (click)="closeMenu()">{{ t().nav.about }}</a>
-      <a [routerLink]="path('experience')" (click)="closeMenu()">{{ t().nav.experience }}</a>
-      <a [routerLink]="path('timeline')" (click)="closeMenu()">{{ t().nav.timeline }}</a>
-      <a [routerLink]="path('articles')" (click)="closeMenu()">{{ t().nav.articles }}</a>
-      <a [routerLink]="path('contact')" (click)="closeMenu()">{{ t().nav.contact }}</a>
+      <a href="#about" (click)="goToSection($event, 'about')">{{ t().nav.about }}</a>
+      <a href="#experience" (click)="goToSection($event, 'experience')">{{ t().nav.experience }}</a>
+      <a href="#timeline" (click)="goToSection($event, 'timeline')">{{ t().nav.timeline }}</a>
+      <a href="#articles" (click)="goToSection($event, 'articles')">{{ t().nav.articles }}</a>
+      <a href="#contact" (click)="goToSection($event, 'contact')">{{ t().nav.contact }}</a>
     </nav>
 
     <div class="header-actions">
@@ -57,7 +57,7 @@
         <p class="hero-summary">{{ t().profile.summary }}</p>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" [routerLink]="path('experience')">{{ t().hero.ctaExperience }}</a>
+          <a class="btn btn-primary" href="#experience" (click)="goToSection($event, 'experience')">{{ t().hero.ctaExperience }}</a>
           <a
             class="btn btn-ghost"
             href="https://www.linkedin.com/in/marciokgr/"

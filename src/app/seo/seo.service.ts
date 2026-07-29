@@ -2,12 +2,7 @@ import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { Injectable, PLATFORM_ID, inject } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { translations } from '../i18n/translations';
-import {
-  LANG_PREFIX,
-  SITE_URL,
-  SectionKey,
-  buildPath,
-} from '../i18n/routing';
+import { LANG_PREFIX, SITE_URL, buildPath } from '../i18n/routing';
 import { Lang } from '../i18n/types';
 
 @Injectable({ providedIn: 'root' })
@@ -17,11 +12,10 @@ export class SeoService {
   private readonly document = inject(DOCUMENT);
   private readonly platformId = inject(PLATFORM_ID);
 
-  update(lang: Lang, section: SectionKey): void {
+  update(lang: Lang): void {
     const content = translations[lang];
-    const seo = content.seo[section];
-    const path = buildPath(lang, section);
-    const url = `${SITE_URL}${path}`;
+    const seo = content.seo.home;
+    const url = `${SITE_URL}${buildPath(lang, 'home')}`;
 
     this.title.setTitle(seo.title);
     this.meta.updateTag({ name: 'description', content: seo.description });
@@ -34,7 +28,7 @@ export class SeoService {
     this.meta.updateTag({ name: 'twitter:description', content: seo.description });
 
     this.setCanonical(url);
-    this.setHreflang(section);
+    this.setHreflang();
     this.setHtmlLang(lang);
   }
 
@@ -48,7 +42,7 @@ export class SeoService {
     link.setAttribute('href', url);
   }
 
-  private setHreflang(section: SectionKey): void {
+  private setHreflang(): void {
     this.document
       .querySelectorAll("link[rel='alternate'][hreflang]")
       .forEach((node) => node.remove());
@@ -64,19 +58,18 @@ export class SeoService {
       const link = this.document.createElement('link');
       link.setAttribute('rel', 'alternate');
       link.setAttribute('hreflang', hreflang);
-      link.setAttribute('href', `${SITE_URL}${buildPath(lang, section)}`);
+      link.setAttribute('href', `${SITE_URL}${buildPath(lang, 'home')}`);
       this.document.head.appendChild(link);
     });
   }
 
   private setHtmlLang(lang: Lang): void {
-    if (!isPlatformBrowser(this.platformId)) {
-      this.document.documentElement.lang =
-        lang === 'pt' ? 'pt-BR' : lang === 'es' ? 'es' : 'en';
-      return;
-    }
     this.document.documentElement.lang =
       lang === 'pt' ? 'pt-BR' : lang === 'es' ? 'es' : 'en';
+
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
   }
 
   prefix(lang: Lang): string {
