@@ -35,9 +35,14 @@ Saída em `dist/portfolio/browser`, com prerender das rotas, `404.html`, `sitema
 
 ## Deploy
 
-O workflow em `.github/workflows/deploy.yml` publica automaticamente no GitHub Pages a cada push na branch `main`.
+O workflow em `.github/workflows/deploy.yml` faz o build e publica na branch `gh-pages` a cada push em `main`.
 
-Em **Settings → Pages**, selecione a fonte **GitHub Actions**.
+Em **Settings → Pages**:
+1. **Source:** Deploy from a branch
+2. **Branch:** `gh-pages` / `/ (root)`
+3. Save
+
+> Repositórios `username.github.io` precisam publicar a partir de uma branch (não só pelo artifact do Actions).
 
 ## Conteúdo
 
