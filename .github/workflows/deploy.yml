@@ -38,7 +38,7 @@ jobs:
         run: |
           rm -rf docs assets pt-br en es
           rm -f index.html index.csr.html 404.html .nojekyll favicon.ico robots.txt sitemap.xml
-          rm -f main-*.js polyfills-*.js styles-*.css
+          rm -f main-*.js polyfills-*.js styles-*.css chunk-*.js
 
           mkdir docs
           cp -r dist/portfolio/browser/. docs/
@@ -68,6 +68,7 @@ jobs:
             main-*.js
             polyfills-*.js
             styles-*.css
+            chunk-*.js
 
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
