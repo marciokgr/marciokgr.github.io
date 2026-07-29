@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://marciokgr.github.io/pt-br</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://marciokgr.github.io/pt-br" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://marciokgr.github.io/en" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://marciokgr.github.io/es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marciokgr.github.io/pt-br" />
+  </url>
+  <url>
+    <loc>https://marciokgr.github.io/pt-br/sobre</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://marciokgr.github.io/pt-br/sobre" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://marciokgr.github.io/en/about" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://marciokgr.github.io/es/sobre" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marciokgr.github.io/pt-br/sobre" />
+  </url>
+  <url>
+    <loc>https://marciokgr.github.io/pt-br/experiencia</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://marciokgr.github.io/pt-br/experiencia" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://marciokgr.github.io/en/experience" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://marciokgr.github.io/es/experiencia" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marciokgr.github.io/pt-br/experiencia" />
+  </url>
+  <url>
+    <loc>https://marciokgr.github.io/pt-br/timeline</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://marciokgr.github.io/pt-br/timeline" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://marciokgr.github.io/en/timeline" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://marciokgr.github.io/es/timeline" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marciokgr.github.io/pt-br/timeline" />
+  </url>
+  <url>
+    <loc>https://marciokgr.github.io/pt-br/artigos</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://marciokgr.github.io/pt-br/artigos" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://marciokgr.github.io/en/articles" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://marciokgr.github.io/es/articulos" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marciokgr.github.io/pt-br/artigos" />
+  </url>
+  <url>
+    <loc>https://marciokgr.github.io/pt-br/contato</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://marciokgr.github.io/pt-br/contato" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://marciokgr.github.io/en/contact" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://marciokgr.github.io/es/contacto" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marciokgr.github.io/pt-br/contato" />
+  </url>
+  <url>
+    <loc>https://marciokgr.github.io/en</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://marciokgr.github.io/pt-br" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://marciokgr.github.io/en" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://marciokgr.github.io/es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marciokgr.github.io/pt-br" />
+  </url>
+  <url>
+    <loc>https://marciokgr.github.io/en/about</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://marciokgr.github.io/pt-br/sobre" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://marciokgr.github.io/en/about" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://marciokgr.github.io/es/sobre" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marciokgr.github.io/pt-br/sobre" />
+  </url>
+  <url>
+    <loc>https://marciokgr.github.io/en/experience</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://marciokgr.github.io/pt-br/experiencia" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://marciokgr.github.io/en/experience" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://marciokgr.github.io/es/experiencia" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marciokgr.github.io/pt-br/experiencia" />
+  </url>
+  <url>
+    <loc>https://marciokgr.github.io/en/timeline</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://marciokgr.github.io/pt-br/timeline" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://marciokgr.github.io/en/timeline" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://marciokgr.github.io/es/timeline" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marciokgr.github.io/pt-br/timeline" />
+  </url>
+  <url>
+    <loc>https://marciokgr.github.io/en/articles</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://marciokgr.github.io/pt-br/artigos" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://marciokgr.github.io/en/articles" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://marciokgr.github.io/es/articulos" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marciokgr.github.io/pt-br/artigos" />
+  </url>
+  <url>
+    <loc>https://marciokgr.github.io/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://marciokgr.github.io/pt-br/contato" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://marciokgr.github.io/en/contact" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://marciokgr.github.io/es/contacto" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marciokgr.github.io/pt-br/contato" />
+  </url>
+  <url>
+    <loc>https://marciokgr.github.io/es</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://marciokgr.github.io/pt-br" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://marciokgr.github.io/en" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://marciokgr.github.io/es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marciokgr.github.io/pt-br" />
+  </url>
+  <url>
+    <loc>https://marciokgr.github.io/es/sobre</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://marciokgr.github.io/pt-br/sobre" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://marciokgr.github.io/en/about" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://marciokgr.github.io/es/sobre" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marciokgr.github.io/pt-br/sobre" />
+  </url>
+  <url>
+    <loc>https://marciokgr.github.io/es/experiencia</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://marciokgr.github.io/pt-br/experiencia" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://marciokgr.github.io/en/experience" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://marciokgr.github.io/es/experiencia" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marciokgr.github.io/pt-br/experiencia" />
+  </url>
+  <url>
+    <loc>https://marciokgr.github.io/es/timeline</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://marciokgr.github.io/pt-br/timeline" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://marciokgr.github.io/en/timeline" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://marciokgr.github.io/es/timeline" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marciokgr.github.io/pt-br/timeline" />
+  </url>
+  <url>
+    <loc>https://marciokgr.github.io/es/articulos</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://marciokgr.github.io/pt-br/artigos" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://marciokgr.github.io/en/articles" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://marciokgr.github.io/es/articulos" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marciokgr.github.io/pt-br/artigos" />
+  </url>
+  <url>
+    <loc>https://marciokgr.github.io/es/contacto</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://marciokgr.github.io/pt-br/contato" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://marciokgr.github.io/en/contact" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://marciokgr.github.io/es/contacto" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marciokgr.github.io/pt-br/contato" />
+  </url>
+</urlset>

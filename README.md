@@ -35,14 +35,16 @@ Saída em `dist/portfolio/browser`, com prerender das rotas, `404.html`, `sitema
 
 ## Deploy
 
-O workflow em `.github/workflows/deploy.yml` faz o build e publica na branch `gh-pages` a cada push em `main`.
+O workflow publica o site em `docs/` (na `main`) e também na branch `gh-pages`.
 
-Em **Settings → Pages**:
-1. **Source:** Deploy from a branch
-2. **Branch:** `gh-pages` / `/ (root)`
-3. Save
+**Configuração obrigatória** em [Settings → Pages](https://github.com/marciokgr/marciokgr.github.io/settings/pages):
 
-> Repositórios `username.github.io` precisam publicar a partir de uma branch (não só pelo artifact do Actions).
+1. **Source:** Deploy from a branch  
+2. **Branch:** `main`  
+3. **Folder:** `/docs`  
+4. Save  
+
+Sem isso, o GitHub Pages continua mostrando o README da raiz do repositório.
 
 ## Conteúdo
 

@@ -32,13 +32,24 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Add .nojekyll
-        run: touch dist/portfolio/browser/.nojekyll
+      - name: Publish site to docs/
+        run: |
+          rm -rf docs
+          mkdir docs
+          cp -r dist/portfolio/browser/. docs/
+          touch docs/.nojekyll
 
-      - name: Deploy to gh-pages
+      - name: Commit docs for GitHub Pages
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'chore: publish site to docs [skip ci]'
+          file_pattern: docs/**
+          skip_dirty_check: false
+
+      - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/portfolio/browser
+          publish_dir: ./docs
           publish_branch: gh-pages
           force_orphan: true
