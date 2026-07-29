@@ -28,6 +28,11 @@ export interface Article {
   url: string;
 }
 
+export interface SeoEntry {
+  title: string;
+  description: string;
+}
+
 export interface AppContent {
   skipLink: string;
   menu: string;
@@ -66,6 +71,14 @@ export interface AppContent {
     subtitle: string;
   };
   footer: string;
+  seo: {
+    home: SeoEntry;
+    about: SeoEntry;
+    experience: SeoEntry;
+    timeline: SeoEntry;
+    articles: SeoEntry;
+    contact: SeoEntry;
+  };
   profile: {
     name: string;
     title: string;
@@ -82,4 +95,5 @@ export interface AppContent {
 export interface LangOption {
   code: Lang;
   label: string;
+  prefix: string;
 }

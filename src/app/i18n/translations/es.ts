@@ -41,6 +41,38 @@ export const es: AppContent = {
     subtitle: 'Conéctate conmigo a través de los canales abajo.',
   },
   footer: 'Página personal en GitHub Pages.',
+  seo: {
+    home: {
+      title: 'Márcio Krüger · Ingeniero de Software · Arquitecto · Tech Lead',
+      description:
+        'Currículum y portafolio de Márcio Krüger — Ingeniero de Software, Arquitecto de Software y Tech Lead en Blumenau/SC, Brasil.',
+    },
+    about: {
+      title: 'Sobre mí · Márcio Krüger',
+      description:
+        'Conoce la trayectoria, skills y competencias de Márcio Krüger en arquitectura, .NET, cloud y liderazgo técnico.',
+    },
+    experience: {
+      title: 'Experiencia profesional · Márcio Krüger',
+      description:
+        'Experiencia profesional de Márcio Krüger en CWI, Skopia, Bancorbrás, Ailos, Cervello, Ellevo y Ambev Tech.',
+    },
+    timeline: {
+      title: 'Timeline de carrera · Márcio Krüger',
+      description:
+        'Línea de tiempo de la carrera de Márcio Krüger, del desarrollo a la arquitectura de software.',
+    },
+    articles: {
+      title: 'Artículos y publicaciones · Márcio Krüger',
+      description:
+        'Artículos de Márcio Krüger en Medium sobre .NET, arquitectura, microservicios y buenas prácticas.',
+    },
+    contact: {
+      title: 'Contacto · Márcio Krüger',
+      description:
+        'Contacta a Márcio Krüger por correo, WhatsApp, GitHub, LinkedIn o Medium.',
+    },
+  },
   profile: {
     name: 'Márcio Krüger',
     title: 'Ingeniero de Software · Arquitecto de Software · Tech Lead',

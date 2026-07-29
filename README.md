@@ -4,6 +4,18 @@ Página pessoal em Angular com biografia, experiências, timeline profissional e
 
 **Site:** https://marciokgr.github.io
 
+## URLs e idiomas
+
+Rotas amigáveis para SEO:
+
+| Idioma | Home | Sobre |
+|--------|------|-------|
+| PT | `/pt-br` | `/pt-br/sobre` |
+| EN | `/en` | `/en/about` |
+| ES | `/es` | `/es/sobre` |
+
+Também existem rotas para experiência, timeline, artigos e contato.
+
 ## Desenvolvimento
 
 ```bash
@@ -11,25 +23,21 @@ npm install
 npm start
 ```
 
-Acesse `http://localhost:4200`.
+Acesse `http://localhost:4200` (redireciona para o idioma detectado).
 
 ## Build
 
 ```bash
-npm run build -- --configuration production
+npm run build
 ```
 
-Saída em `dist/portfolio/browser`.
+Saída em `dist/portfolio/browser`, com prerender das rotas, `404.html`, `sitemap.xml` e `robots.txt`.
 
 ## Deploy
 
 O workflow em `.github/workflows/deploy.yml` publica automaticamente no GitHub Pages a cada push na branch `main`.
 
-No repositório, em **Settings → Pages**, selecione a fonte **GitHub Actions**.
-
-## Idiomas
-
-A página suporta **Português (PT)**, **Inglês (EN)** e **Espanhol (ES)** com troca em tempo real pelo seletor no topo. A preferência é salva no `localStorage`.
+Em **Settings → Pages**, selecione a fonte **GitHub Actions**.
 
 ## Conteúdo
 
