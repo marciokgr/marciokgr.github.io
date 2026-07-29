@@ -1,33 +1,49 @@
-<a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+<a class="skip-link" href="#conteudo">{{ t().skipLink }}</a>
 
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="#topo" (click)="closeMenu()">Márcio Krüger</a>
-
-    <button
-      class="menu-toggle"
-      type="button"
-      [attr.aria-expanded]="menuOpen"
-      aria-controls="nav-principal"
-      (click)="toggleMenu()"
-    >
-      <span class="sr-only">Menu</span>
-      <span></span>
-      <span></span>
-    </button>
+    <a class="brand" href="#topo" (click)="closeMenu()">{{ t().profile.name }}</a>
 
     <nav
       id="nav-principal"
       class="nav"
       [class.open]="menuOpen"
-      aria-label="Principal"
+      [attr.aria-label]="t().navAria"
     >
-      <a href="#sobre" (click)="closeMenu()">Sobre</a>
-      <a href="#experiencia" (click)="closeMenu()">Experiência</a>
-      <a href="#timeline" (click)="closeMenu()">Timeline</a>
-      <a href="#artigos" (click)="closeMenu()">Artigos</a>
-      <a href="#contato" (click)="closeMenu()">Contato</a>
+      <a href="#sobre" (click)="closeMenu()">{{ t().nav.about }}</a>
+      <a href="#experiencia" (click)="closeMenu()">{{ t().nav.experience }}</a>
+      <a href="#timeline" (click)="closeMenu()">{{ t().nav.timeline }}</a>
+      <a href="#artigos" (click)="closeMenu()">{{ t().nav.articles }}</a>
+      <a href="#contato" (click)="closeMenu()">{{ t().nav.contact }}</a>
     </nav>
+
+    <div class="header-actions">
+      <div class="lang-switcher" role="group" [attr.aria-label]="t().langLabel">
+        @for (option of languages; track option.code) {
+          <button
+            type="button"
+            class="lang-btn"
+            [class.active]="lang() === option.code"
+            [attr.aria-pressed]="lang() === option.code"
+            (click)="setLang(option.code)"
+          >
+            {{ option.label }}
+          </button>
+        }
+      </div>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        [attr.aria-expanded]="menuOpen"
+        aria-controls="nav-principal"
+        (click)="toggleMenu()"
+      >
+        <span class="sr-only">{{ t().menu }}</span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </div>
 </header>
 
@@ -35,13 +51,13 @@
   <section id="topo" class="hero">
     <div class="container hero-grid">
       <div class="hero-copy reveal">
-        <p class="eyebrow">{{ profile.location }}</p>
-        <h1>{{ profile.name }}</h1>
-        <p class="hero-title">{{ profile.title }}</p>
-        <p class="hero-summary">{{ profile.summary }}</p>
+        <p class="eyebrow">{{ t().profile.location }}</p>
+        <h1>{{ t().profile.name }}</h1>
+        <p class="hero-title">{{ t().profile.title }}</p>
+        <p class="hero-summary">{{ t().profile.summary }}</p>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#experiencia">Ver experiência</a>
+          <a class="btn btn-primary" href="#experiencia">{{ t().hero.ctaExperience }}</a>
           <a
             class="btn btn-ghost"
             href="https://www.linkedin.com/in/marciokgr/"
@@ -55,8 +71,8 @@
 
       <figure class="hero-photo reveal delay-1">
         <img
-          [src]="profile.photo"
-          [alt]="'Foto de ' + profile.name"
+          [src]="t().profile.photo"
+          [alt]="t().hero.photoAlt + ' ' + t().profile.name"
           width="320"
           height="320"
         />
@@ -67,15 +83,12 @@
   <section id="sobre" class="section">
     <div class="container">
       <header class="section-head reveal">
-        <h2>Sobre mim</h2>
-        <p>
-          Engenheiro de Software com trajetória sólida em arquitetura,
-          liderança técnica e desenvolvimento de sistemas críticos.
-        </p>
+        <h2>{{ t().about.title }}</h2>
+        <p>{{ t().about.subtitle }}</p>
       </header>
 
       <div class="skills-grid">
-        @for (group of profile.skillGroups; track group.title; let i = $index) {
+        @for (group of t().profile.skillGroups; track group.title; let i = $index) {
           <article class="skill-block reveal" [style.--delay]="i * 60 + 'ms'">
             <h3>{{ group.title }}</h3>
             <ul>
@@ -92,15 +105,12 @@
   <section id="experiencia" class="section section-muted">
     <div class="container">
       <header class="section-head reveal">
-        <h2>Experiência profissional</h2>
-        <p>
-          Projetos e papéis com foco em modernização .NET, microsserviços e
-          liderança técnica.
-        </p>
+        <h2>{{ t().experience.title }}</h2>
+        <p>{{ t().experience.subtitle }}</p>
       </header>
 
       <div class="experience-list">
-        @for (job of profile.experiences; track job.company + job.role) {
+        @for (job of t().profile.experiences; track job.company + job.role + job.period) {
           <article class="experience-card reveal">
             <div class="experience-meta">
               <h3>{{ job.role }}</h3>
@@ -108,7 +118,7 @@
               <p class="period">
                 {{ job.period }}
                 @if (job.current) {
-                  <span class="badge">Atual</span>
+                  <span class="badge">{{ t().experience.currentBadge }}</span>
                 }
               </p>
               <p class="location">{{ job.location }}</p>
@@ -130,12 +140,12 @@
   <section id="timeline" class="section">
     <div class="container">
       <header class="section-head reveal">
-        <h2>Timeline da carreira</h2>
-        <p>Uma visão cronológica do histórico profissional.</p>
+        <h2>{{ t().timeline.title }}</h2>
+        <p>{{ t().timeline.subtitle }}</p>
       </header>
 
       <ol class="timeline">
-        @for (job of profile.experiences; track job.company + job.role; let i = $index) {
+        @for (job of t().profile.experiences; track job.company + job.role + job.period; let i = $index) {
           <li class="timeline-item reveal" [style.--delay]="i * 80 + 'ms'">
             <div class="timeline-dot" [class.current]="job.current"></div>
             <div class="timeline-content">
@@ -152,12 +162,12 @@
   <section id="artigos" class="section section-muted">
     <div class="container">
       <header class="section-head reveal">
-        <h2>Artigos e publicações</h2>
-        <p>Conteúdos publicados no Medium sobre .NET, arquitetura e boas práticas.</p>
+        <h2>{{ t().articles.title }}</h2>
+        <p>{{ t().articles.subtitle }}</p>
       </header>
 
       <ul class="article-list">
-        @for (article of profile.articles; track article.url) {
+        @for (article of t().profile.articles; track article.url) {
           <li class="reveal">
             <a [href]="article.url" target="_blank" rel="noopener noreferrer">
               {{ article.title }}
@@ -172,12 +182,12 @@
   <section id="contato" class="section">
     <div class="container contact">
       <header class="section-head reveal">
-        <h2>Redes e contato</h2>
-        <p>Conecte-se comigo pelas redes abaixo.</p>
+        <h2>{{ t().contact.title }}</h2>
+        <p>{{ t().contact.subtitle }}</p>
       </header>
 
       <ul class="social-list reveal">
-        @for (social of profile.socials; track social.url) {
+        @for (social of t().profile.socials; track social.url) {
           <li>
             <a
               class="social-card"
@@ -200,6 +210,6 @@
 
 <footer class="site-footer">
   <div class="container">
-    <p>© {{ year }} {{ profile.name }}. Página pessoal no GitHub Pages.</p>
+    <p>© {{ year }} {{ t().profile.name }}. {{ t().footer }}</p>
   </div>
 </footer>

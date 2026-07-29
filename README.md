@@ -27,6 +27,10 @@ O workflow em `.github/workflows/deploy.yml` publica automaticamente no GitHub P
 
 No repositório, em **Settings → Pages**, selecione a fonte **GitHub Actions**.
 
+## Idiomas
+
+A página suporta **Português (PT)**, **Inglês (EN)** e **Espanhol (ES)** com troca em tempo real pelo seletor no topo. A preferência é salva no `localStorage`.
+
 ## Conteúdo
 
-Os dados do currículo ficam em `src/app/data/profile.data.ts`. A foto está em `public/assets/profile.jpg`.
+As traduções ficam em `src/app/i18n/translations/` (`pt.ts`, `en.ts`, `es.ts`). A foto está em `public/assets/profile.jpg`.
