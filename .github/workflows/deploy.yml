@@ -21,6 +21,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Precisa do histórico/credencial para o push do site publicado
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -36,9 +39,13 @@ jobs:
 
       - name: Publish static site to repo root and docs/
         run: |
+          set -euo pipefail
+
+          # Remove artefatos estáticos anteriores da raiz e de docs/
           rm -rf docs assets pt-br en es
           rm -f index.html index.csr.html 404.html .nojekyll favicon.ico robots.txt sitemap.xml
           rm -f main-*.js polyfills-*.js styles-*.css chunk-*.js
+          rm -f android-chrome-*.png apple-touch-icon.png favicon-*.png
 
           mkdir docs
           cp -r dist/portfolio/browser/. docs/
@@ -48,27 +55,50 @@ jobs:
           cp -r dist/portfolio/browser/. ./
           touch .nojekyll
 
+          echo "Published files at repo root:"
+          ls -la main-*.js chunk-*.js index.html 2>/dev/null || true
+
       - name: Commit published site
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: 'chore: publish static site [skip ci]'
-          file_pattern: |
-            docs/**
-            assets/**
-            pt-br/**
-            en/**
-            es/**
-            index.html
-            index.csr.html
-            404.html
-            .nojekyll
-            favicon.ico
-            robots.txt
-            sitemap.xml
-            main-*.js
-            polyfills-*.js
-            styles-*.css
-            chunk-*.js
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Inclui arquivos novos, alterados e deletados do publish
+          # (file_pattern do auto-commit deixava de fora chunks/remoções na raiz)
+          git add -A -- \
+            docs \
+            assets \
+            pt-br \
+            en \
+            es \
+            index.html \
+            index.csr.html \
+            404.html \
+            .nojekyll \
+            favicon.ico \
+            robots.txt \
+            sitemap.xml \
+            main-*.js \
+            polyfills-*.js \
+            styles-*.css \
+            chunk-*.js \
+            android-chrome-*.png \
+            apple-touch-icon.png \
+            favicon-*.png \
+            || true
+
+          # Garante staging de deleções de bundles antigos na raiz
+          git ls-files --deleted -z | xargs -0 -r git add -A --
+
+          if git diff --cached --quiet; then
+            echo "No static site changes to commit"
+            exit 0
+          fi
+
+          git commit -m "chore: publish static site [skip ci]"
+          git push origin HEAD:main
 
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
