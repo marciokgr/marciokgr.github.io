@@ -1,3 +1,7 @@
+import {
+  certificationsEs,
+  educationEs,
+} from '../education.data';
 import { AppContent } from '../types';
 
 export const es: AppContent = {
@@ -11,6 +15,7 @@ export const es: AppContent = {
     about: 'Sobre mí',
     experience: 'Experiencia',
     timeline: 'Timeline',
+    education: 'Formación',
     articles: 'Artículos',
     contact: 'Contacto',
   },
@@ -32,6 +37,14 @@ export const es: AppContent = {
   timeline: {
     title: 'Timeline de carrera',
     subtitle: 'Una visión cronológica del historial profesional.',
+  },
+  education: {
+    title: 'Formación y certificaciones',
+    subtitle: 'Formación académica y licencias y certificados.',
+    academicTitle: 'Formación académica',
+    certificatesTitle: 'Licencias y certificados',
+    credentialLabel: 'Mostrar credencial',
+    credentialIdLabel: 'Código de la credencial',
   },
   articles: {
     title: 'Artículos y publicaciones',
@@ -372,6 +385,8 @@ export const es: AppContent = {
         ],
       },
     ],
+    education: educationEs,
+    certifications: certificationsEs,
     articles: [
       {
         title: '.NET 9 consume menos memoria que Rust',

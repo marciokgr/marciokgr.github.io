@@ -21,6 +21,7 @@
       <a href="#about" (click)="goToSection($event, 'about')">{{ t().nav.about }}</a>
       <a href="#experience" (click)="goToSection($event, 'experience')">{{ t().nav.experience }}</a>
       <a href="#timeline" (click)="goToSection($event, 'timeline')">{{ t().nav.timeline }}</a>
+      <a href="#education" (click)="goToSection($event, 'education')">{{ t().nav.education }}</a>
       <a href="#articles" (click)="goToSection($event, 'articles')">{{ t().nav.articles }}</a>
       <a href="#contact" (click)="goToSection($event, 'contact')">{{ t().nav.contact }}</a>
     </nav>
@@ -167,7 +168,84 @@
     </div>
   </section>
 
-  <section id="articles" class="section section-muted">
+  <section id="education" class="section section-muted">
+    <div class="container">
+      <header class="section-head reveal">
+        <h2>{{ t().education.title }}</h2>
+        <p>{{ t().education.subtitle }}</p>
+      </header>
+
+      <div class="edu-block reveal">
+        <h3 class="edu-block-title">{{ t().education.academicTitle }}</h3>
+        <ul class="edu-list">
+          @for (item of t().profile.education; track item.institution + item.period) {
+            <li class="edu-item">
+              <div class="edu-logo" aria-hidden="true">
+                @if (item.logo) {
+                  <img [src]="item.logo" [alt]="''" width="48" height="48" loading="lazy" />
+                } @else {
+                  <span>{{ item.initials }}</span>
+                }
+              </div>
+              <div class="edu-body">
+                <h4>{{ item.institution }}</h4>
+                <p class="edu-degree">{{ item.degree }}</p>
+                <p class="edu-meta">{{ item.period }}</p>
+              </div>
+            </li>
+          }
+        </ul>
+      </div>
+
+      <div class="edu-block reveal">
+        <h3 class="edu-block-title">{{ t().education.certificatesTitle }}</h3>
+        <ul class="edu-list">
+          @for (cert of t().profile.certifications; track cert.title + cert.issuer + cert.issued) {
+            <li class="edu-item">
+              <div class="edu-logo" aria-hidden="true">
+                @if (cert.logo) {
+                  <img [src]="cert.logo" [alt]="''" width="48" height="48" loading="lazy" />
+                } @else {
+                  <span>{{ cert.initials }}</span>
+                }
+              </div>
+              <div class="edu-body">
+                <h4>{{ cert.title }}</h4>
+                <p class="edu-issuer">{{ cert.issuer }}</p>
+                <p class="edu-meta">{{ cert.issued }}</p>
+                @if (cert.credentialId) {
+                  <p class="edu-meta">
+                    {{ t().education.credentialIdLabel }}
+                    {{ cert.credentialId }}
+                  </p>
+                }
+                @if (cert.credentialUrl) {
+                  <a
+                    class="edu-credential"
+                    [href]="cert.credentialUrl"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {{ t().education.credentialLabel }}
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                }
+                @if (cert.skills?.length) {
+                  <ul class="edu-skills">
+                    @for (skill of cert.skills; track skill) {
+                      <li>{{ skill }}</li>
+                    }
+                  </ul>
+                }
+              </div>
+            </li>
+          }
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="articles" class="section">
     <div class="container">
       <header class="section-head reveal">
         <h2>{{ t().articles.title }}</h2>

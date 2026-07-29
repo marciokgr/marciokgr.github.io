@@ -1,3 +1,7 @@
+import {
+  certificationsEn,
+  educationEn,
+} from '../education.data';
 import { AppContent } from '../types';
 
 export const en: AppContent = {
@@ -11,6 +15,7 @@ export const en: AppContent = {
     about: 'About',
     experience: 'Experience',
     timeline: 'Timeline',
+    education: 'Education',
     articles: 'Articles',
     contact: 'Contact',
   },
@@ -32,6 +37,14 @@ export const en: AppContent = {
   timeline: {
     title: 'Career timeline',
     subtitle: 'A chronological view of my professional history.',
+  },
+  education: {
+    title: 'Education and certifications',
+    subtitle: 'Academic background and licenses and certifications.',
+    academicTitle: 'Education',
+    certificatesTitle: 'Licenses and certifications',
+    credentialLabel: 'Show credential',
+    credentialIdLabel: 'Credential ID',
   },
   articles: {
     title: 'Articles and publications',
@@ -372,6 +385,8 @@ export const en: AppContent = {
         ],
       },
     ],
+    education: educationEn,
+    certifications: certificationsEn,
     articles: [
       {
         title: '.NET 9 uses less memory than Rust',

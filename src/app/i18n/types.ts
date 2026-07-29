@@ -28,6 +28,25 @@ export interface Article {
   url: string;
 }
 
+export interface EducationItem {
+  institution: string;
+  degree: string;
+  period: string;
+  logo?: string;
+  initials: string;
+}
+
+export interface CertificationItem {
+  title: string;
+  issuer: string;
+  issued: string;
+  logo?: string;
+  initials: string;
+  credentialId?: string;
+  credentialUrl?: string;
+  skills?: string[];
+}
+
 export interface SeoEntry {
   title: string;
   description: string;
@@ -44,6 +63,7 @@ export interface AppContent {
     about: string;
     experience: string;
     timeline: string;
+    education: string;
     articles: string;
     contact: string;
   };
@@ -63,6 +83,14 @@ export interface AppContent {
   timeline: {
     title: string;
     subtitle: string;
+  };
+  education: {
+    title: string;
+    subtitle: string;
+    academicTitle: string;
+    certificatesTitle: string;
+    credentialLabel: string;
+    credentialIdLabel: string;
   };
   articles: {
     title: string;
@@ -90,6 +118,8 @@ export interface AppContent {
     socials: SocialLink[];
     skillGroups: SkillGroup[];
     experiences: Experience[];
+    education: EducationItem[];
+    certifications: CertificationItem[];
     articles: Article[];
   };
 }

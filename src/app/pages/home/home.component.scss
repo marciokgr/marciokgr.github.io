@@ -48,6 +48,7 @@
 #about,
 #experience,
 #timeline,
+#education,
 #articles,
 #contact,
 #conteudo {
@@ -447,6 +448,131 @@
   &.current {
     background: var(--accent);
     box-shadow: 0 0 0 4px rgba(15, 110, 124, 0.15);
+  }
+}
+
+.edu-block {
+  & + & {
+    margin-top: 2.75rem;
+  }
+}
+
+.edu-block-title {
+  margin: 0 0 1.25rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.edu-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0;
+}
+
+.edu-item {
+  display: grid;
+  grid-template-columns: 3.25rem 1fr;
+  gap: 1rem;
+  padding: 1.15rem 0;
+  border-bottom: 1px solid var(--line);
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.edu-logo {
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 0.65rem;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  flex-shrink: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 0.35rem;
+  }
+
+  span {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.02em;
+  }
+}
+
+.edu-body {
+  min-width: 0;
+
+  h4 {
+    margin: 0;
+    font-size: 1.02rem;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+  }
+}
+
+.edu-degree,
+.edu-issuer {
+  margin: 0.3rem 0 0;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+.edu-issuer {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.edu-meta {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.edu-credential {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.55rem;
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.edu-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.65rem 0 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    padding: 0.28rem 0.6rem;
+    border-radius: 0.4rem;
+    background: #fff;
+    border: 1px solid var(--line);
+    font-size: 0.78rem;
+    color: var(--muted);
   }
 }
 
