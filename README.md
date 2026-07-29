@@ -35,16 +35,15 @@ Saída em `dist/portfolio/browser`, com prerender das rotas, `404.html`, `sitema
 
 ## Deploy
 
-O workflow publica o site em `docs/` (na `main`) e também na branch `gh-pages`.
+O workflow gera o site estático na **raiz** do repositório e em `docs/`, além da branch `gh-pages`.
 
-**Configuração obrigatória** em [Settings → Pages](https://github.com/marciokgr/marciokgr.github.io/settings/pages):
+Em [Settings → Pages](https://github.com/marciokgr/marciokgr.github.io/settings/pages), use uma destas opções:
 
-1. **Source:** Deploy from a branch  
-2. **Branch:** `main`  
-3. **Folder:** `/docs`  
-4. Save  
+- **Branch `main` + Folder `/ (root)`** (recomendado com a publicação na raiz), ou  
+- **Branch `main` + Folder `/docs`**, ou  
+- **Branch `gh-pages` + Folder `/ (root)`**
 
-Sem isso, o GitHub Pages continua mostrando o README da raiz do repositório.
+Se aparecer o README no lugar do site, a pasta/fonte do Pages está errada.
 
 ## Conteúdo
 
