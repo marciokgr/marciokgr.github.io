@@ -69,6 +69,7 @@ export interface AppContent {
   };
   hero: {
     ctaExperience: string;
+    ctaDownloadCv: string;
     photoAlt: string;
   };
   about: {

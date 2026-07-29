@@ -21,6 +21,7 @@ export const pt: AppContent = {
   },
   hero: {
     ctaExperience: 'Ver experiência',
+    ctaDownloadCv: 'Baixar CV (PDF)',
     photoAlt: 'Foto de',
   },
   about: {

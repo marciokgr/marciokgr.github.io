@@ -67,6 +67,9 @@
 
         <div class="hero-actions">
           <a class="btn btn-primary" href="#experience" (click)="goToSection($event, 'experience')">{{ t().hero.ctaExperience }}</a>
+          <button class="btn btn-ghost" type="button" (click)="downloadCv()">
+            {{ t().hero.ctaDownloadCv }}
+          </button>
           <a
             class="btn btn-ghost"
             href="https://www.linkedin.com/in/marciokgr/"

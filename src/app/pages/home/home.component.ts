@@ -10,6 +10,7 @@ import {
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
+import { CvPdfService } from '../../cv/cv-pdf.service';
 import { I18nService } from '../../i18n/i18n.service';
 import { LANG_PREFIX, buildCommands, langFromPrefix } from '../../i18n/routing';
 import { Lang } from '../../i18n/types';
@@ -26,6 +27,7 @@ export class HomeComponent implements AfterViewInit {
   private readonly router = inject(Router);
   private readonly i18n = inject(I18nService);
   private readonly seo = inject(SeoService);
+  private readonly cvPdf = inject(CvPdfService);
   private readonly platformId = inject(PLATFORM_ID);
   private readonly destroyRef = inject(DestroyRef);
 
@@ -76,6 +78,13 @@ export class HomeComponent implements AfterViewInit {
 
   toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
+  }
+
+  downloadCv(): void {
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
+    this.cvPdf.download(this.t(), this.lang());
   }
 
   private updateBackToTopVisibility(): void {
