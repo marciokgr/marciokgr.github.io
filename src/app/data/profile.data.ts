@@ -100,10 +100,10 @@ export const profile = {
   ] as SkillGroup[],
   experiences: [
     {
-      role: 'Arquiteto de Softwares Sênior',
+      role: 'Arquiteto de software sênior',
       company: 'CWI Software',
-      period: 'Atual',
-      location: 'Blumenau, SC',
+      period: 'Abr 2026 — o momento',
+      location: 'São Paulo, Brasil · Remoto',
       current: true,
       description:
         'Arquiteto de software na Techfin ERP Finance (SupplierCard), atuando em melhorias de sistemas legados, pipelines e evolução constante das aplicações e processos de desenvolvimento. Principais frentes: modernização de aplicações .NET e arquitetura de microsserviços com foco em escalabilidade, integração contínua e alta performance.',
@@ -126,39 +126,48 @@ export const profile = {
       ],
     },
     {
-      role: 'Tech Lead · Engenheiro de Software Sênior',
+      role: 'Tech lead · Engenheiro de software sênior',
       company: 'CWI Software',
-      period: 'Anterior',
-      location: 'Blumenau, SC',
+      period: 'Nov 2025 — Abr 2026',
+      location: 'São Paulo, Brasil · Remoto',
       description:
-        'Liderança técnica em iniciativas de engenharia, apoiando times no desenvolvimento de soluções robustas, com atenção a qualidade, performance e boas práticas no ecossistema .NET e front-end Angular.',
+        'Liderança técnica e atuação como engenheiro de software sênior, apoiando times no desenvolvimento de soluções robustas, com atenção a qualidade, performance e boas práticas no ecossistema .NET.',
       technologies: ['C#', '.NET', 'Angular', 'RabbitMQ', 'CI/CD'],
     },
     {
-      role: 'Tech Lead · Engenharia de Sistemas',
-      company: 'Cooperativa Central Ailos',
-      period: 'Mar 2021 — Mar 2024',
-      location: 'Blumenau, SC',
-      description:
-        'Tech Lead de Engenharia de Sistemas, conduzindo iniciativas de arquitetura, evolução de plataformas e alinhamento técnico entre times, com foco em soluções escaláveis para o ecossistema cooperativo.',
-      technologies: ['C#', '.NET', 'SQL Server', 'Azure', 'Arquitetura'],
-    },
-    {
-      role: 'Engenheiro de Software Sênior',
+      role: 'Engenheiro de software sênior',
       company: 'Skopia Digital',
-      period: 'Anterior',
-      location: 'Brasil',
+      period: 'Abr 2025 — Nov 2025',
+      location: 'São Paulo, Brasil · Remoto',
       description:
         'Atuação como engenheiro de software sênior no desenvolvimento e evolução de soluções digitais, com ênfase em qualidade de entrega e stack .NET.',
       technologies: ['C#', '.NET', 'APIs'],
     },
     {
-      role: 'Engenheiro de Software Sênior',
-      company: 'Cervello BPMS | TMS',
-      period: 'Anterior',
-      location: 'Brasil',
+      role: 'Tech lead · Engenheiro de software sênior',
+      company: 'Bancorbrás',
+      period: 'Mar 2024 — Abr 2025',
+      location: 'Brasília, DF · Remoto',
       description:
-        'Análise e desenvolvimento de aplicações Web e Desktop com foco em usabilidade e performance. Atuação com pipelines Azure, CI/CD e stack Microsoft completa.',
+        'Tech lead e engenheiro de software sênior, conduzindo iniciativas técnicas e entregas de software em ambiente remoto.',
+      technologies: ['C#', '.NET', 'Liderança técnica'],
+    },
+    {
+      role: 'Tech Lead | Engenharia de Sistemas',
+      company: 'Cooperativa Central Ailos',
+      period: 'Mar 2021 — Mar 2024',
+      location: 'Blumenau, SC · Híbrido',
+      description:
+        'Tech Lead de Engenharia de Sistemas, conduzindo iniciativas de arquitetura, evolução de plataformas e alinhamento técnico entre times, com foco em soluções escaláveis para o ecossistema cooperativo.',
+      technologies: ['C#', '.NET', 'SQL Server', 'Azure', 'Arquitetura'],
+    },
+    {
+      role: 'Engenheiro de software sênior',
+      company: 'Cervello BPMS | TMS',
+      period: 'Set 2019 — Mar 2021',
+      location: 'São Paulo, Brasil · Remoto',
+      description:
+        'Análise e desenvolvimento de aplicações Web e Desktop com C#, .NET, Razor, Telerik (Kendo UI), WebAPI, HTML5, jQuery, CSS3, Dapper, WCF e SQL Server. Atuação com Azure Pipelines, CI/CD, melhoria de usabilidade e performance.',
       technologies: [
         'C#',
         '.NET',
@@ -173,13 +182,49 @@ export const profile = {
       ],
     },
     {
-      role: 'Tech Lead · Engenheiro de Software Sênior',
+      role: 'Tech Lead · Engenheiro de software sênior',
       company: 'Ellevo Soluções em TI',
-      period: 'Anterior',
-      location: 'Brasil',
+      period: 'Mar 2014 — Set 2019',
+      location: 'Blumenau, SC · Híbrido',
       description:
-        'Responsável pelas demandas do Sistema Ellevo: melhorias, novas funcionalidades, liderança e motivação da equipe, além de resolução de conflitos e acompanhamento das entregas do produto.',
-      technologies: ['C#', '.NET', 'SQL Server', 'Liderança técnica'],
+        'Responsável pelas demandas do Sistema Ellevo, melhorias e novas demandas, com liderança e motivação da equipe e resolução de conflitos. Responsável pelo Ellevo Cloud (IBM Cloud e Azure), otimização de custos FinOps e melhorias de performance. Também atuou como Product Owner no projeto Ellevo Next 8 (Cloud First) e como Tech Lead no legado em .NET, C#, VB6 e SQL Server.',
+      technologies: [
+        'C#',
+        '.NET',
+        'VB6',
+        'SQL Server',
+        'IBM Cloud',
+        'Azure',
+        'FinOps',
+        'Product Owner',
+      ],
+    },
+    {
+      role: 'Analista de sistemas sênior',
+      company: 'Ellevo Soluções em TI',
+      period: 'Nov 2006 — Mar 2014',
+      location: 'Blumenau, SC · Presencial',
+      description:
+        'Análise e levantamento de necessidades, criação e atualização de especificações de sistema, criação e acompanhamento de cronograma, desenvolvimento e manutenção de aplicações em C#, VB6, ASP e SQL Server.',
+      technologies: ['C#', 'VB6', 'ASP', 'SQL Server', 'ANS'],
+    },
+    {
+      role: 'Desenvolvedor de software',
+      company: 'Ambev Tech',
+      period: 'Mar 2005 — Out 2006',
+      location: 'Blumenau, SC · Presencial',
+      description:
+        'Desenvolvimento e manutenção de aplicação Web com ASP, AJAX, VBScript, JavaScript, VB6, C#, .NET e SQL Server (triggers, stored procedures e functions). Instalação e manutenção da aplicação em plataforma Windows.',
+      technologies: [
+        'ASP',
+        'AJAX',
+        'VBScript',
+        'JavaScript',
+        'VB6',
+        'C#',
+        '.NET',
+        'SQL Server',
+      ],
     },
   ] as Experience[],
   articles: [
