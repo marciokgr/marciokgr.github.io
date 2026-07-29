@@ -6,6 +6,7 @@ export const en: AppContent = {
   navAria: 'Main',
   langLabel: 'Language',
   nav: {
+    home: 'Home',
     about: 'About',
     experience: 'Experience',
     timeline: 'Timeline',

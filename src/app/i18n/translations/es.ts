@@ -6,6 +6,7 @@ export const es: AppContent = {
   navAria: 'Principal',
   langLabel: 'Idioma',
   nav: {
+    home: 'Home',
     about: 'Sobre mí',
     experience: 'Experiencia',
     timeline: 'Timeline',

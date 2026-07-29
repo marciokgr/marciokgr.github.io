@@ -39,6 +39,7 @@ export interface AppContent {
   navAria: string;
   langLabel: string;
   nav: {
+    home: string;
     about: string;
     experience: string;
     timeline: string;

@@ -10,6 +10,7 @@
       [class.open]="menuOpen"
       [attr.aria-label]="t().navAria"
     >
+      <a href="#topo" (click)="goToSection($event, 'topo')">{{ t().nav.home }}</a>
       <a href="#about" (click)="goToSection($event, 'about')">{{ t().nav.about }}</a>
       <a href="#experience" (click)="goToSection($event, 'experience')">{{ t().nav.experience }}</a>
       <a href="#timeline" (click)="goToSection($event, 'timeline')">{{ t().nav.timeline }}</a>
