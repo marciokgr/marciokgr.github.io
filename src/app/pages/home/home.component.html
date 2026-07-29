@@ -2,7 +2,14 @@
 
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="#topo" (click)="goToSection($event, 'topo')">{{ t().profile.name }}</a>
+    <a class="brand" href="#topo" (click)="goToSection($event, 'topo')" [attr.aria-label]="t().profile.name">
+      <img
+        src="android-chrome-192x192.png"
+        [alt]="t().profile.name"
+        width="40"
+        height="40"
+      />
+    </a>
 
     <nav
       id="nav-principal"
