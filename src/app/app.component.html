@@ -182,13 +182,13 @@
             <a
               class="social-card"
               [href]="social.url"
-              target="_blank"
-              rel="noopener noreferrer"
+              [attr.target]="social.external === false ? null : '_blank'"
+              [attr.rel]="social.external === false ? null : 'noopener noreferrer'"
             >
               <span class="social-icon" [attr.data-icon]="social.icon" aria-hidden="true"></span>
               <span>
                 <strong>{{ social.label }}</strong>
-                <small>{{ social.url.replace('https://', '') }}</small>
+                <small>{{ social.detail }}</small>
               </span>
             </a>
           </li>

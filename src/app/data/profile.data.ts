@@ -1,7 +1,9 @@
 export interface SocialLink {
   label: string;
   url: string;
-  icon: 'github' | 'linkedin' | 'medium';
+  detail: string;
+  icon: 'github' | 'linkedin' | 'medium' | 'email' | 'whatsapp';
+  external?: boolean;
 }
 
 export interface SkillGroup {
@@ -33,18 +35,34 @@ export const profile = {
     'Profissional com mais de 20 anos de experiência em TI e desenvolvimento de sistemas. Atuo como Engenheiro de Software e Arquiteto, com foco em modernização de aplicações .NET, microsserviços, alta performance e evolução contínua de produtos.',
   socials: [
     {
+      label: 'E-mail',
+      url: 'mailto:marcio.kgr@gmail.com',
+      detail: 'marcio.kgr@gmail.com',
+      icon: 'email',
+      external: false,
+    },
+    {
+      label: 'WhatsApp',
+      url: 'https://wa.me/5547999230489',
+      detail: '+55 47 99923-0489',
+      icon: 'whatsapp',
+    },
+    {
       label: 'GitHub',
       url: 'https://github.com/marciokgr',
+      detail: 'github.com/marciokgr',
       icon: 'github',
     },
     {
       label: 'LinkedIn',
       url: 'https://www.linkedin.com/in/marciokgr/',
+      detail: 'linkedin.com/in/marciokgr',
       icon: 'linkedin',
     },
     {
       label: 'Medium',
       url: 'https://medium.com/@marcio.kgr',
+      detail: 'medium.com/@marcio.kgr',
       icon: 'medium',
     },
   ] as SocialLink[],
