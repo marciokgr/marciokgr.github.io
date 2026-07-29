@@ -12,7 +12,14 @@ import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
 import { CvPdfService } from '../../cv/cv-pdf.service';
 import { I18nService } from '../../i18n/i18n.service';
-import { LANG_PREFIX, buildCommands, langFromPrefix } from '../../i18n/routing';
+import {
+  SectionKey,
+  buildCommands,
+  buildPath,
+  langFromPrefix,
+  sectionFromDomId,
+  sectionFromSlug,
+} from '../../i18n/routing';
 import { Lang } from '../../i18n/types';
 import { SeoService } from '../../seo/seo.service';
 
@@ -46,13 +53,13 @@ export class HomeComponent implements AfterViewInit {
       )
       .subscribe(() => {
         this.applyLangFromUrl();
-        this.scrollToHash();
+        this.scrollFromUrl();
       });
   }
 
   ngAfterViewInit(): void {
     this.applyLangFromUrl();
-    this.scrollToHash();
+    this.scrollFromUrl();
     this.updateBackToTopVisibility();
   }
 
@@ -61,15 +68,25 @@ export class HomeComponent implements AfterViewInit {
     this.updateBackToTopVisibility();
   }
 
+  sectionHref(domId: string): string {
+    return buildPath(this.lang(), sectionFromDomId(domId));
+  }
+
   setLang(lang: Lang): void {
-    void this.router.navigate(buildCommands(lang, 'home'));
+    const section = this.currentSection();
+    void this.router.navigate(buildCommands(lang, section));
     this.closeMenu();
   }
 
-  goToSection(event: Event, sectionId: string): void {
+  goToSection(event: Event, domId: string): void {
     event.preventDefault();
     this.closeMenu();
-    this.scrollToId(sectionId, true);
+    const section = sectionFromDomId(domId);
+    void this.router.navigate(buildCommands(this.lang(), section)).then(() => {
+      if (section === 'home') {
+        this.scrollToId('topo');
+      }
+    });
   }
 
   closeMenu(): void {
@@ -85,6 +102,12 @@ export class HomeComponent implements AfterViewInit {
       return;
     }
     this.cvPdf.download(this.t(), this.lang());
+  }
+
+  private currentSection(): SectionKey {
+    const parts = this.router.url.split('?')[0].split('#')[0].split('/').filter(Boolean);
+    const lang = langFromPrefix(parts[0] ?? null) ?? this.lang();
+    return sectionFromSlug(lang, parts[1] ?? null);
   }
 
   private updateBackToTopVisibility(): void {
@@ -105,24 +128,36 @@ export class HomeComponent implements AfterViewInit {
       return;
     }
 
+    // slug inválido → volta para home do idioma
+    if (parts[1] && sectionFromSlug(lang, parts[1]) === 'home') {
+      void this.router.navigate(buildCommands(lang, 'home'), { replaceUrl: true });
+      return;
+    }
+
     this.i18n.setLang(lang);
     this.seo.update(lang);
   }
 
-  private scrollToHash(): void {
+  private scrollFromUrl(): void {
     if (!isPlatformBrowser(this.platformId)) {
       return;
     }
 
     const hash = window.location.hash.replace('#', '');
-    if (!hash) {
+    if (hash) {
+      this.scrollToId(hash);
       return;
     }
 
-    this.scrollToId(hash, false);
+    const section = this.currentSection();
+    if (section === 'home') {
+      return;
+    }
+
+    this.scrollToId(section);
   }
 
-  private scrollToId(sectionId: string, updateHash: boolean): void {
+  private scrollToId(sectionId: string): void {
     if (!isPlatformBrowser(this.platformId)) {
       return;
     }
@@ -135,11 +170,6 @@ export class HomeComponent implements AfterViewInit {
         }
 
         element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-        if (updateHash) {
-          const prefix = LANG_PREFIX[this.lang()];
-          history.replaceState(null, '', `/${prefix}#${sectionId}`);
-        }
       }, 40);
     });
   }

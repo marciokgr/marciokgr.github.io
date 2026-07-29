@@ -5,6 +5,7 @@ export type SectionKey =
   | 'about'
   | 'experience'
   | 'timeline'
+  | 'education'
   | 'articles'
   | 'contact';
 
@@ -27,6 +28,7 @@ export const SECTION_SLUGS: Record<Lang, Record<Exclude<SectionKey, 'home'>, str
     about: 'sobre',
     experience: 'experiencia',
     timeline: 'timeline',
+    education: 'formacao',
     articles: 'artigos',
     contact: 'contato',
   },
@@ -34,6 +36,7 @@ export const SECTION_SLUGS: Record<Lang, Record<Exclude<SectionKey, 'home'>, str
     about: 'about',
     experience: 'experience',
     timeline: 'timeline',
+    education: 'education',
     articles: 'articles',
     contact: 'contact',
   },
@@ -41,9 +44,20 @@ export const SECTION_SLUGS: Record<Lang, Record<Exclude<SectionKey, 'home'>, str
     about: 'sobre',
     experience: 'experiencia',
     timeline: 'timeline',
+    education: 'formacion',
     articles: 'articulos',
     contact: 'contacto',
   },
+};
+
+/** IDs de âncora no DOM ↔ chaves de seção */
+export const SECTION_DOM_IDS: Record<Exclude<SectionKey, 'home'>, string> = {
+  about: 'about',
+  experience: 'experience',
+  timeline: 'timeline',
+  education: 'education',
+  articles: 'articles',
+  contact: 'contact',
 };
 
 export const SECTION_KEYS: SectionKey[] = [
@@ -51,6 +65,7 @@ export const SECTION_KEYS: SectionKey[] = [
   'about',
   'experience',
   'timeline',
+  'education',
   'articles',
   'contact',
 ];
@@ -68,6 +83,14 @@ export function sectionFromSlug(lang: Lang, slug?: string | null): SectionKey {
   }
 
   const entry = Object.entries(SECTION_SLUGS[lang]).find(([, value]) => value === slug);
+  return (entry?.[0] as SectionKey | undefined) ?? 'home';
+}
+
+export function sectionFromDomId(domId: string): SectionKey {
+  if (domId === 'topo' || domId === 'conteudo') {
+    return 'home';
+  }
+  const entry = Object.entries(SECTION_DOM_IDS).find(([, id]) => id === domId);
   return (entry?.[0] as SectionKey | undefined) ?? 'home';
 }
 
@@ -89,7 +112,7 @@ export function buildCommands(lang: Lang, section: SectionKey = 'home'): string[
 }
 
 export function allPrerenderRoutes(): string[] {
-  const routes: string[] = [];
+  const routes: string[] = ['/'];
 
   (Object.keys(LANG_PREFIX) as Lang[]).forEach((lang) => {
     routes.push(buildPath(lang, 'home'));

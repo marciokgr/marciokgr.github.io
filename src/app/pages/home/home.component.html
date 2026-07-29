@@ -1,8 +1,8 @@
-<a class="skip-link" href="#conteudo" (click)="goToSection($event, 'conteudo')">{{ t().skipLink }}</a>
+<a class="skip-link" [href]="sectionHref('conteudo')" (click)="goToSection($event, 'conteudo')">{{ t().skipLink }}</a>
 
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="#topo" (click)="goToSection($event, 'topo')" [attr.aria-label]="t().profile.name">
+    <a class="brand" [href]="sectionHref('topo')" (click)="goToSection($event, 'topo')" [attr.aria-label]="t().profile.name">
       <img
         src="android-chrome-192x192.png"
         [alt]="t().profile.name"
@@ -17,13 +17,13 @@
       [class.open]="menuOpen"
       [attr.aria-label]="t().navAria"
     >
-      <a href="#topo" (click)="goToSection($event, 'topo')">{{ t().nav.home }}</a>
-      <a href="#about" (click)="goToSection($event, 'about')">{{ t().nav.about }}</a>
-      <a href="#experience" (click)="goToSection($event, 'experience')">{{ t().nav.experience }}</a>
-      <a href="#timeline" (click)="goToSection($event, 'timeline')">{{ t().nav.timeline }}</a>
-      <a href="#education" (click)="goToSection($event, 'education')">{{ t().nav.education }}</a>
-      <a href="#articles" (click)="goToSection($event, 'articles')">{{ t().nav.articles }}</a>
-      <a href="#contact" (click)="goToSection($event, 'contact')">{{ t().nav.contact }}</a>
+      <a [href]="sectionHref('topo')" (click)="goToSection($event, 'topo')">{{ t().nav.home }}</a>
+      <a [href]="sectionHref('about')" (click)="goToSection($event, 'about')">{{ t().nav.about }}</a>
+      <a [href]="sectionHref('experience')" (click)="goToSection($event, 'experience')">{{ t().nav.experience }}</a>
+      <a [href]="sectionHref('timeline')" (click)="goToSection($event, 'timeline')">{{ t().nav.timeline }}</a>
+      <a [href]="sectionHref('education')" (click)="goToSection($event, 'education')">{{ t().nav.education }}</a>
+      <a [href]="sectionHref('articles')" (click)="goToSection($event, 'articles')">{{ t().nav.articles }}</a>
+      <a [href]="sectionHref('contact')" (click)="goToSection($event, 'contact')">{{ t().nav.contact }}</a>
     </nav>
 
     <div class="header-actions">
@@ -66,7 +66,7 @@
         <p class="hero-summary">{{ t().profile.summary }}</p>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#experience" (click)="goToSection($event, 'experience')">{{ t().hero.ctaExperience }}</a>
+          <a class="btn btn-primary" [href]="sectionHref('experience')" (click)="goToSection($event, 'experience')">{{ t().hero.ctaExperience }}</a>
           <button class="btn btn-ghost" type="button" (click)="downloadCv()">
             {{ t().hero.ctaDownloadCv }}
           </button>
