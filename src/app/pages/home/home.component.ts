@@ -3,6 +3,7 @@ import {
   AfterViewInit,
   Component,
   DestroyRef,
+  HostListener,
   PLATFORM_ID,
   inject,
 } from '@angular/core';
@@ -33,6 +34,7 @@ export class HomeComponent implements AfterViewInit {
   readonly languages = this.i18n.languages;
   readonly year = new Date().getFullYear();
   menuOpen = false;
+  showBackToTop = false;
 
   constructor() {
     this.router.events
@@ -49,6 +51,12 @@ export class HomeComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     this.applyLangFromUrl();
     this.scrollToHash();
+    this.updateBackToTopVisibility();
+  }
+
+  @HostListener('window:scroll')
+  onWindowScroll(): void {
+    this.updateBackToTopVisibility();
   }
 
   setLang(lang: Lang): void {
@@ -68,6 +76,15 @@ export class HomeComponent implements AfterViewInit {
 
   toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
+  }
+
+  private updateBackToTopVisibility(): void {
+    if (!isPlatformBrowser(this.platformId)) {
+      this.showBackToTop = false;
+      return;
+    }
+
+    this.showBackToTop = window.scrollY > 320;
   }
 
   private applyLangFromUrl(): void {

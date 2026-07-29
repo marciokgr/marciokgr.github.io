@@ -38,6 +38,7 @@ export interface AppContent {
   menu: string;
   navAria: string;
   langLabel: string;
+  backToTop: string;
   nav: {
     home: string;
     about: string;

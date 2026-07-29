@@ -221,3 +221,15 @@
     <p>© {{ year }} {{ t().profile.name }}. {{ t().footer }}</p>
   </div>
 </footer>
+
+@if (showBackToTop) {
+  <button
+    type="button"
+    class="back-to-top"
+    [attr.aria-label]="t().backToTop"
+    [attr.title]="t().backToTop"
+    (click)="goToSection($event, 'topo')"
+  >
+    <span aria-hidden="true">↑</span>
+  </button>
+}

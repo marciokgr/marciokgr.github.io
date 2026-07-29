@@ -5,6 +5,7 @@ export const pt: AppContent = {
   menu: 'Menu',
   navAria: 'Principal',
   langLabel: 'Idioma',
+  backToTop: 'Voltar ao topo',
   nav: {
     home: 'Home',
     about: 'Sobre',
