@@ -1,4 +1,4 @@
-import {
+﻿import {
   certificationsEs,
   educationEs,
 } from '../education.data';
@@ -183,6 +183,7 @@ export const es: AppContent = {
       {
         role: 'Arquitecto de software senior',
         company: 'CWI Software',
+        companyUrl: 'https://cwi.com.br/',
         period: 'Abr 2026 — actualidad',
         location: 'São Paulo, Brasil · Remoto',
         current: true,
@@ -209,6 +210,7 @@ export const es: AppContent = {
       {
         role: 'Tech lead · Ingeniero de software senior',
         company: 'CWI Software',
+        companyUrl: 'https://cwi.com.br/',
         period: 'Nov 2025 — Abr 2026',
         location: 'São Paulo, Brasil · Remoto',
         description:
@@ -229,6 +231,7 @@ export const es: AppContent = {
       {
         role: 'Ingeniero de software senior',
         company: 'Skopia Digital',
+        companyUrl: 'https://skopiadigital.com.br/',
         period: 'Abr 2025 — Nov 2025',
         location: 'São Paulo, Brasil · Remoto',
         description:
@@ -259,6 +262,7 @@ export const es: AppContent = {
       {
         role: 'Tech lead · Ingeniero de software senior',
         company: 'Bancorbrás',
+        companyUrl: 'https://grupobancorbras.com.br/',
         period: 'Mar 2024 — Abr 2025',
         location: 'Brasília, Distrito Federal, Brasil · Remoto',
         description:
@@ -291,6 +295,7 @@ export const es: AppContent = {
       {
         role: 'Tech Lead | Ingeniería de Sistemas',
         company: 'Cooperativa Central Ailos',
+        companyUrl: 'https://www.ailos.coop.br/',
         period: 'Mar 2021 — Mar 2024',
         location: 'Blumenau, Santa Catarina, Brasil · Híbrido',
         description:
@@ -323,6 +328,7 @@ export const es: AppContent = {
       {
         role: 'Ingeniero de software senior',
         company: 'Cervello BPMS | TMS',
+        companyUrl: 'https://cervello.com.br/',
         period: 'Set 2019 — Mar 2021',
         location: 'São Paulo, Brasil · Remoto',
         description:
@@ -343,6 +349,7 @@ export const es: AppContent = {
       {
         role: 'Tech Lead · Ingeniero de software senior',
         company: 'Ellevo Soluções em TI',
+        companyUrl: 'https://ellevo.com/',
         period: 'Mar 2014 — Set 2019',
         location: 'Blumenau, SC · Híbrido',
         description:
@@ -361,6 +368,7 @@ export const es: AppContent = {
       {
         role: 'Analista de sistemas senior',
         company: 'Ellevo Soluções em TI',
+        companyUrl: 'https://ellevo.com/',
         period: 'Nov 2006 — Mar 2014',
         location: 'Blumenau, SC · Presencial',
         description:
@@ -370,6 +378,7 @@ export const es: AppContent = {
       {
         role: 'Desarrollador de software',
         company: 'Ambev Tech',
+        companyUrl: 'https://www.ambevtech.com.br/',
         period: 'Mar 2005 — Oct 2006',
         location: 'Blumenau, SC · Presencial',
         description:

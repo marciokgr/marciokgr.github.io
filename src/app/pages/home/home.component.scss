@@ -361,6 +361,16 @@
     margin: 0.4rem 0 0;
     font-weight: 600;
     color: var(--accent);
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover,
+      &:focus-visible {
+        text-decoration: underline;
+      }
+    }
   }
 
   .period,
@@ -596,6 +606,17 @@
   p {
     margin: 0.35rem 0 0;
     color: var(--muted);
+  }
+
+  .timeline-company {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+    }
   }
 }
 

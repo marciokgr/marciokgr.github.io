@@ -126,7 +126,13 @@
           <article class="experience-card reveal">
             <div class="experience-meta">
               <h3>{{ job.role }}</h3>
-              <p class="company">{{ job.company }}</p>
+              @if (job.companyUrl) {
+                <p class="company">
+                  <a [href]="job.companyUrl" target="_blank" rel="noopener noreferrer">{{ job.company }}</a>
+                </p>
+              } @else {
+                <p class="company">{{ job.company }}</p>
+              }
               <p class="period">
                 {{ job.period }}
                 @if (job.current) {
@@ -163,7 +169,14 @@
             <div class="timeline-content">
               <time>{{ job.period }}</time>
               <h3>{{ job.role }}</h3>
-              <p>{{ job.company }} · {{ job.location }}</p>
+              <p>
+                @if (job.companyUrl) {
+                  <a class="timeline-company" [href]="job.companyUrl" target="_blank" rel="noopener noreferrer">{{ job.company }}</a>
+                } @else {
+                  <span>{{ job.company }}</span>
+                }
+                · {{ job.location }}
+              </p>
             </div>
           </li>
         }

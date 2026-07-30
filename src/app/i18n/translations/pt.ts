@@ -184,6 +184,7 @@ export const pt: AppContent = {
       {
         role: 'Arquiteto de software sênior',
         company: 'CWI Software',
+        companyUrl: 'https://cwi.com.br/',
         period: 'Abr 2026 — o momento',
         location: 'São Paulo, Brasil · Remoto',
         current: true,
@@ -210,6 +211,7 @@ export const pt: AppContent = {
       {
         role: 'Tech lead · Engenheiro de software sênior',
         company: 'CWI Software',
+        companyUrl: 'https://cwi.com.br/',
         period: 'Nov 2025 — Abr 2026',
         location: 'São Paulo, Brasil · Remoto',
         description:
@@ -230,6 +232,7 @@ export const pt: AppContent = {
       {
         role: 'Engenheiro de software sênior',
         company: 'Skopia Digital',
+        companyUrl: 'https://skopiadigital.com.br/',
         period: 'Abr 2025 — Nov 2025',
         location: 'São Paulo, Brasil · Remoto',
         description:
@@ -260,6 +263,7 @@ export const pt: AppContent = {
       {
         role: 'Tech lead · Engenheiro de software sênior',
         company: 'Bancorbrás',
+        companyUrl: 'https://grupobancorbras.com.br/',
         period: 'Mar 2024 — Abr 2025',
         location: 'Brasília, Distrito Federal, Brasil · Remoto',
         description:
@@ -292,6 +296,7 @@ export const pt: AppContent = {
       {
         role: 'Tech Lead | Engenharia de Sistemas',
         company: 'Cooperativa Central Ailos',
+        companyUrl: 'https://www.ailos.coop.br/',
         period: 'Mar 2021 — Mar 2024',
         location: 'Blumenau, Santa Catarina, Brasil · Híbrido',
         description:
@@ -324,6 +329,7 @@ export const pt: AppContent = {
       {
         role: 'Engenheiro de software sênior',
         company: 'Cervello BPMS | TMS',
+        companyUrl: 'https://cervello.com.br/',
         period: 'Set 2019 — Mar 2021',
         location: 'São Paulo, Brasil · Remoto',
         description:
@@ -344,6 +350,7 @@ export const pt: AppContent = {
       {
         role: 'Tech Lead · Engenheiro de software sênior',
         company: 'Ellevo Soluções em TI',
+        companyUrl: 'https://ellevo.com/',
         period: 'Mar 2014 — Set 2019',
         location: 'Blumenau, SC · Híbrido',
         description:
@@ -362,6 +369,7 @@ export const pt: AppContent = {
       {
         role: 'Analista de sistemas sênior',
         company: 'Ellevo Soluções em TI',
+        companyUrl: 'https://ellevo.com/',
         period: 'Nov 2006 — Mar 2014',
         location: 'Blumenau, SC · Presencial',
         description:
@@ -371,6 +379,7 @@ export const pt: AppContent = {
       {
         role: 'Desenvolvedor de software',
         company: 'Ambev Tech',
+        companyUrl: 'https://www.ambevtech.com.br/',
         period: 'Mar 2005 — Out 2006',
         location: 'Blumenau, SC · Presencial',
         description:

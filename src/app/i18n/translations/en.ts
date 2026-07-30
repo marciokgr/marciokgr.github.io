@@ -1,4 +1,4 @@
-import {
+﻿import {
   certificationsEn,
   educationEn,
 } from '../education.data';
@@ -183,6 +183,7 @@ export const en: AppContent = {
       {
         role: 'Senior Software Architect',
         company: 'CWI Software',
+        companyUrl: 'https://cwi.com.br/',
         period: 'Apr 2026 — Present',
         location: 'São Paulo, Brazil · Remote',
         current: true,
@@ -209,6 +210,7 @@ export const en: AppContent = {
       {
         role: 'Tech Lead · Senior Software Engineer',
         company: 'CWI Software',
+        companyUrl: 'https://cwi.com.br/',
         period: 'Nov 2025 — Apr 2026',
         location: 'São Paulo, Brazil · Remote',
         description:
@@ -229,6 +231,7 @@ export const en: AppContent = {
       {
         role: 'Senior Software Engineer',
         company: 'Skopia Digital',
+        companyUrl: 'https://skopiadigital.com.br/',
         period: 'Apr 2025 — Nov 2025',
         location: 'São Paulo, Brazil · Remote',
         description:
@@ -259,6 +262,7 @@ export const en: AppContent = {
       {
         role: 'Tech Lead · Senior Software Engineer',
         company: 'Bancorbrás',
+        companyUrl: 'https://grupobancorbras.com.br/',
         period: 'Mar 2024 — Apr 2025',
         location: 'Brasília, Federal District, Brazil · Remote',
         description:
@@ -291,6 +295,7 @@ export const en: AppContent = {
       {
         role: 'Tech Lead | Systems Engineering',
         company: 'Cooperativa Central Ailos',
+        companyUrl: 'https://www.ailos.coop.br/',
         period: 'Mar 2021 — Mar 2024',
         location: 'Blumenau, Santa Catarina, Brazil · Hybrid',
         description:
@@ -323,6 +328,7 @@ export const en: AppContent = {
       {
         role: 'Senior Software Engineer',
         company: 'Cervello BPMS | TMS',
+        companyUrl: 'https://cervello.com.br/',
         period: 'Sep 2019 — Mar 2021',
         location: 'São Paulo, Brazil · Remote',
         description:
@@ -343,6 +349,7 @@ export const en: AppContent = {
       {
         role: 'Tech Lead · Senior Software Engineer',
         company: 'Ellevo Soluções em TI',
+        companyUrl: 'https://ellevo.com/',
         period: 'Mar 2014 — Sep 2019',
         location: 'Blumenau, SC · Hybrid',
         description:
@@ -361,6 +368,7 @@ export const en: AppContent = {
       {
         role: 'Senior Systems Analyst',
         company: 'Ellevo Soluções em TI',
+        companyUrl: 'https://ellevo.com/',
         period: 'Nov 2006 — Mar 2014',
         location: 'Blumenau, SC · On-site',
         description:
@@ -370,6 +378,7 @@ export const en: AppContent = {
       {
         role: 'Software Developer',
         company: 'Ambev Tech',
+        companyUrl: 'https://www.ambevtech.com.br/',
         period: 'Mar 2005 — Oct 2006',
         location: 'Blumenau, SC · On-site',
         description:
