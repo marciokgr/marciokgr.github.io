@@ -11,6 +11,8 @@ export const educationShared: EducationItem[] = [
   },
 ];
 
+const dinamioSkills = ['C#', 'VB.NET', '.NET'];
+
 export const certificationsPt: CertificationItem[] = [
   {
     title: 'Apache Kafka',
@@ -19,6 +21,7 @@ export const certificationsPt: CertificationItem[] = [
     issued: 'Emitida em abr de 2022',
     logo: 'assets/orgs/dataflair.png',
     initials: 'DF',
+    skills: ['Kafka'],
   },
   {
     title: 'C# COMPLETO Programação Orientada a Objetos + Projetos',
@@ -36,6 +39,7 @@ export const certificationsPt: CertificationItem[] = [
     issued: 'Emitida em nov de 2019',
     logo: 'assets/orgs/udemy.png',
     initials: 'UD',
+    skills: ['React', 'Front-end'],
   },
   {
     title: 'Inglês Avançado',
@@ -44,6 +48,7 @@ export const certificationsPt: CertificationItem[] = [
     issued: 'Emitida em abr de 2010',
     logo: 'assets/orgs/atrox.png',
     initials: 'AT',
+    skills: ['Inglês'],
   },
   {
     title: 'Programa de desenvolvimento de líderes',
@@ -52,6 +57,7 @@ export const certificationsPt: CertificationItem[] = [
     issued: 'Emitida em nov de 2014',
     logo: 'assets/orgs/fritzmuller.png',
     initials: 'FM',
+    skills: ['Liderança'],
   },
   {
     title: 'MCPS: Microsoft Certified Professional',
@@ -69,6 +75,7 @@ export const certificationsPt: CertificationItem[] = [
     logo: 'assets/orgs/microsoft.png',
     initials: 'MS',
     credentialId: 'E199-8120',
+    skills: ['HTML5'],
   },
   {
     title:
@@ -78,6 +85,7 @@ export const certificationsPt: CertificationItem[] = [
     issued: 'Emitida em dez de 2012',
     logo: 'assets/orgs/dinamio.png',
     initials: 'DI',
+    skills: dinamioSkills,
   },
   {
     title:
@@ -87,6 +95,7 @@ export const certificationsPt: CertificationItem[] = [
     issued: 'Emitida em set de 2012',
     logo: 'assets/orgs/dinamio.png',
     initials: 'DI',
+    skills: dinamioSkills,
   },
   {
     title:
@@ -96,6 +105,7 @@ export const certificationsPt: CertificationItem[] = [
     issued: 'Emitida em nov de 2012',
     logo: 'assets/orgs/dinamio.png',
     initials: 'DI',
+    skills: dinamioSkills,
   },
   {
     title: 'Gerenciamento Ágil de Projetos com Scrum',
@@ -104,6 +114,7 @@ export const certificationsPt: CertificationItem[] = [
     issued: 'Emitida em set de 2015',
     logo: 'assets/orgs/clarify.png',
     initials: 'CL',
+    skills: ['Agilidade', 'Scrum'],
   },
   {
     title: 'Sucesso em Liderança',
@@ -113,6 +124,7 @@ export const certificationsPt: CertificationItem[] = [
     issued: 'Emitida em abr de 2015',
     logo: 'assets/orgs/sbcoaching.png',
     initials: 'SB',
+    skills: ['Liderança'],
   },
 ];
 
@@ -140,11 +152,13 @@ export const certificationsEn: CertificationItem[] = [
     ...certificationsPt[3],
     title: 'Advanced English',
     issued: 'Issued Apr 2010',
+    skills: ['English'],
   },
   {
     ...certificationsPt[4],
     title: 'Leadership Development Program',
     issued: 'Issued Nov 2014',
+    skills: ['Leadership'],
   },
   { ...certificationsPt[5], issued: 'Issued Mar 2013' },
   { ...certificationsPt[6], issued: 'Issued Nov 2013' },
@@ -155,11 +169,13 @@ export const certificationsEn: CertificationItem[] = [
     ...certificationsPt[10],
     title: 'Agile Project Management with Scrum',
     issued: 'Issued Sep 2015',
+    skills: ['Agility', 'Scrum'],
   },
   {
     ...certificationsPt[11],
     title: 'Success in Leadership',
     issued: 'Issued Apr 2015',
+    skills: ['Leadership'],
   },
 ];
 
@@ -187,11 +203,13 @@ export const certificationsEs: CertificationItem[] = [
     ...certificationsPt[3],
     title: 'Inglés Avanzado',
     issued: 'Emitida en abr de 2010',
+    skills: ['Inglés'],
   },
   {
     ...certificationsPt[4],
     title: 'Programa de desarrollo de líderes',
     issued: 'Emitida en nov de 2014',
+    skills: ['Liderazgo'],
   },
   { ...certificationsPt[5], issued: 'Emitida en mar de 2013' },
   { ...certificationsPt[6], issued: 'Emitida en nov de 2013' },
@@ -202,10 +220,12 @@ export const certificationsEs: CertificationItem[] = [
     ...certificationsPt[10],
     title: 'Gestión Ágil de Proyectos con Scrum',
     issued: 'Emitida en set de 2015',
+    skills: ['Agilidad', 'Scrum'],
   },
   {
     ...certificationsPt[11],
     title: 'Éxito en Liderazgo',
     issued: 'Emitida en abr de 2015',
+    skills: ['Liderazgo'],
   },
 ];
