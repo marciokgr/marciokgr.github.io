@@ -204,7 +204,13 @@
                 }
               </div>
               <div class="edu-body">
-                <h4>{{ item.institution }}</h4>
+                <h4>
+                  @if (item.institutionUrl) {
+                    <a [href]="item.institutionUrl" target="_blank" rel="noopener noreferrer">{{ item.institution }}</a>
+                  } @else {
+                    <span>{{ item.institution }}</span>
+                  }
+                </h4>
                 <p class="edu-degree">{{ item.degree }}</p>
                 <p class="edu-meta">{{ item.period }}</p>
               </div>
@@ -227,7 +233,13 @@
               </div>
               <div class="edu-body">
                 <h4>{{ cert.title }}</h4>
-                <p class="edu-issuer">{{ cert.issuer }}</p>
+                <p class="edu-issuer">
+                  @if (cert.issuerUrl) {
+                    <a [href]="cert.issuerUrl" target="_blank" rel="noopener noreferrer">{{ cert.issuer }}</a>
+                  } @else {
+                    <span>{{ cert.issuer }}</span>
+                  }
+                </p>
                 <p class="edu-meta">{{ cert.issued }}</p>
                 @if (cert.credentialId) {
                   <p class="edu-meta">

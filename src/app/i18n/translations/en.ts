@@ -351,7 +351,7 @@ export const en: AppContent = {
         company: 'Ellevo Soluções em TI',
         companyUrl: 'https://ellevo.com/',
         period: 'Mar 2014 — Sep 2019',
-        location: 'Blumenau, SC · Hybrid',
+        location: 'Blumenau, Santa Catarina, Brazil · Hybrid',
         description:
           'Responsible for Ellevo System demands, improvements, and new features, with team leadership, motivation, and conflict resolution. Owned Ellevo Cloud (IBM Cloud and Azure), FinOps cost optimization, and application performance improvements. Also acted as Product Owner on the Ellevo Next 8 project (Cloud First) and as Tech Lead on the legacy stack in .NET, C#, VB6, and SQL Server.',
         technologies: [
@@ -370,7 +370,7 @@ export const en: AppContent = {
         company: 'Ellevo Soluções em TI',
         companyUrl: 'https://ellevo.com/',
         period: 'Nov 2006 — Mar 2014',
-        location: 'Blumenau, SC · On-site',
+        location: 'Blumenau, Santa Catarina, Brazil · On-site',
         description:
           'Requirements analysis and gathering, creating and updating system specifications, building and tracking schedules, and developing and maintaining applications in C#, VB6, ASP, and SQL Server.',
         technologies: ['C#', 'VB6', 'ASP', 'SQL Server', 'SLA'],
@@ -380,7 +380,7 @@ export const en: AppContent = {
         company: 'Ambev Tech',
         companyUrl: 'https://www.ambevtech.com.br/',
         period: 'Mar 2005 — Oct 2006',
-        location: 'Blumenau, SC · On-site',
+        location: 'Blumenau, Santa Catarina, Brazil · On-site',
         description:
           'Development and maintenance of a Web application using ASP, AJAX, VBScript, JavaScript, VB6, C#, .NET, and SQL Server (triggers, stored procedures, and functions). Installation and maintenance of the application on the Windows platform.',
         technologies: [

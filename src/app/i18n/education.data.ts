@@ -3,6 +3,7 @@ import { CertificationItem, EducationItem } from './types';
 export const educationShared: EducationItem[] = [
   {
     institution: 'UNIASSELVI',
+    institutionUrl: 'https://portal.uniasselvi.com.br/',
     degree: 'Sistemas de Informação, Computer Technology/Computer Systems Technology',
     period: '2003 – 2007',
     logo: 'assets/orgs/uniasselvi.png',
@@ -14,6 +15,7 @@ export const certificationsPt: CertificationItem[] = [
   {
     title: 'Apache Kafka',
     issuer: 'DataFlair',
+    issuerUrl: 'https://data-flair.training/',
     issued: 'Emitida em abr de 2022',
     logo: 'assets/orgs/dataflair.png',
     initials: 'DF',
@@ -21,6 +23,7 @@ export const certificationsPt: CertificationItem[] = [
   {
     title: 'C# COMPLETO Programação Orientada a Objetos + Projetos',
     issuer: 'Udemy',
+    issuerUrl: 'https://www.udemy.com/',
     issued: 'Emitida em jan de 2022',
     logo: 'assets/orgs/udemy.png',
     initials: 'UD',
@@ -29,6 +32,7 @@ export const certificationsPt: CertificationItem[] = [
   {
     title: 'React Js do zero ao avançado na pratica',
     issuer: 'Udemy',
+    issuerUrl: 'https://www.udemy.com/',
     issued: 'Emitida em nov de 2019',
     logo: 'assets/orgs/udemy.png',
     initials: 'UD',
@@ -36,6 +40,7 @@ export const certificationsPt: CertificationItem[] = [
   {
     title: 'Inglês Avançado',
     issuer: 'Atrox Núcleo de Inglês',
+    issuerUrl: 'https://atrox.com.br/',
     issued: 'Emitida em abr de 2010',
     logo: 'assets/orgs/atrox.png',
     initials: 'AT',
@@ -43,7 +48,9 @@ export const certificationsPt: CertificationItem[] = [
   {
     title: 'Programa de desenvolvimento de líderes',
     issuer: 'Fundação Fritz Müller',
+    issuerUrl: 'https://www.fundacaofritzmuller.com.br/',
     issued: 'Emitida em nov de 2014',
+    logo: 'assets/orgs/fritzmuller.png',
     initials: 'FM',
   },
   {
@@ -67,6 +74,7 @@ export const certificationsPt: CertificationItem[] = [
     title:
       '10265A - Developing Data Access Solutions with Microsoft Visual Studio 2010',
     issuer: 'Dinamio Tecnologia',
+    issuerUrl: 'https://www.dinamio.com.br/',
     issued: 'Emitida em dez de 2012',
     logo: 'assets/orgs/dinamio.png',
     initials: 'DI',
@@ -75,6 +83,7 @@ export const certificationsPt: CertificationItem[] = [
     title:
       '10264A - Developing Web Applications with Microsoft Visual Studio 2010',
     issuer: 'Dinamio Tecnologia',
+    issuerUrl: 'https://www.dinamio.com.br/',
     issued: 'Emitida em set de 2012',
     logo: 'assets/orgs/dinamio.png',
     initials: 'DI',
@@ -83,6 +92,7 @@ export const certificationsPt: CertificationItem[] = [
     title:
       '10263A - Developing Microsoft Windows Communication Foundation Solutions with Microsoft Visual Studio 2010',
     issuer: 'Dinamio Tecnologia',
+    issuerUrl: 'https://www.dinamio.com.br/',
     issued: 'Emitida em nov de 2012',
     logo: 'assets/orgs/dinamio.png',
     initials: 'DI',
@@ -90,6 +100,7 @@ export const certificationsPt: CertificationItem[] = [
   {
     title: 'Gerenciamento Ágil de Projetos com Scrum',
     issuer: 'Clarify',
+    issuerUrl: 'https://clarify.com.br/',
     issued: 'Emitida em set de 2015',
     logo: 'assets/orgs/clarify.png',
     initials: 'CL',
@@ -97,7 +108,10 @@ export const certificationsPt: CertificationItem[] = [
   {
     title: 'Sucesso em Liderança',
     issuer: 'SBCoaching',
+    issuerUrl:
+      'https://www.linkedin.com/company/sociedade-brasileira-de-coaching/',
     issued: 'Emitida em abr de 2015',
+    logo: 'assets/orgs/sbcoaching.png',
     initials: 'SB',
   },
 ];

@@ -31,6 +31,7 @@ export interface Article {
 
 export interface EducationItem {
   institution: string;
+  institutionUrl?: string;
   degree: string;
   period: string;
   logo?: string;
@@ -40,6 +41,7 @@ export interface EducationItem {
 export interface CertificationItem {
   title: string;
   issuer: string;
+  issuerUrl?: string;
   issued: string;
   logo?: string;
   initials: string;
