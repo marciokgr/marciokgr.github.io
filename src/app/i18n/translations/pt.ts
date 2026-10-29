@@ -407,6 +407,14 @@ export const pt: AppContent = {
     certifications: certificationsPt,
     articles: [
       {
+        title: 'Arquitetura hexagonal',
+        url: 'https://medium.com/@marcio.kgr/arquitetura-hexagonal-8958fb3e5507',
+      },
+      {
+        title: 'Diminua seu custo de TOKEN utilizando o RTK',
+        url: 'https://medium.com/@marcio.kgr/dimiua-seu-custo-de-token-utilizando-o-rtk-3536666f7aa3',
+      },
+      {
         title: '.NET 9, tem menor consumo de memória que Rust',
         url: 'https://medium.com/@marcio.kgr/net-9-tem-menor-consumo-de-mem%C3%B3ria-que-rust-7f10d46c257d',
       },
