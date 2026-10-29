@@ -73,8 +73,9 @@
   img {
     width: 2.5rem;
     height: 2.5rem;
-    border-radius: 0.5rem;
+    border-radius: 50%;
     object-fit: cover;
+    border: 1px solid var(--line);
   }
 
   &:hover {
@@ -172,7 +173,7 @@
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
+  grid-template-columns: 0.7fr 1.3fr;
   gap: 3rem;
   align-items: center;
 }
@@ -258,7 +259,7 @@
 
 .hero-photo {
   margin: 0;
-  justify-self: end;
+  justify-self: start;
 
   img {
     width: min(280px, 100%);
@@ -812,8 +813,7 @@
   }
 
   .hero-photo {
-    justify-self: start;
-    order: -1;
+    justify-self: center;
   }
 
   .hero {

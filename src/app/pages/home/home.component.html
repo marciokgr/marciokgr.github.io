@@ -4,7 +4,7 @@
   <div class="container header-inner">
     <a class="brand" [href]="sectionHref('topo')" (click)="goToSection($event, 'topo')" [attr.aria-label]="t().profile.name">
       <img
-        src="android-chrome-192x192.png"
+        [src]="t().profile.photo"
         [alt]="t().profile.name"
         width="40"
         height="40"
@@ -59,7 +59,16 @@
 <main id="conteudo">
   <section id="topo" class="hero">
     <div class="container hero-grid">
-      <div class="hero-copy reveal">
+      <figure class="hero-photo reveal">
+        <img
+          [src]="t().profile.photo"
+          [alt]="t().hero.photoAlt + ' ' + t().profile.name"
+          width="320"
+          height="320"
+        />
+      </figure>
+
+      <div class="hero-copy reveal delay-1">
         <p class="eyebrow">{{ t().profile.location }}</p>
         <h1>{{ t().profile.name }}</h1>
         <p class="hero-title">{{ t().profile.title }}</p>
@@ -80,15 +89,6 @@
           </a>
         </div>
       </div>
-
-      <figure class="hero-photo reveal delay-1">
-        <img
-          [src]="t().profile.photo"
-          [alt]="t().hero.photoAlt + ' ' + t().profile.name"
-          width="320"
-          height="320"
-        />
-      </figure>
     </div>
   </section>
 
