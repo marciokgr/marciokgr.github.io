@@ -30,11 +30,18 @@ export class CvPdfService {
       maxWidth: number,
       lineHeight: number
     ): void => {
-      const lines = doc.splitTextToSize(text, maxWidth) as string[];
-      for (const line of lines) {
-        ensureSpace(lineHeight);
-        doc.text(line, x, y);
-        y += lineHeight;
+      const blocks = text.split('\n');
+      for (const block of blocks) {
+        if (!block.trim()) {
+          y += lineHeight * 0.45;
+          continue;
+        }
+        const lines = doc.splitTextToSize(block, maxWidth) as string[];
+        for (const line of lines) {
+          ensureSpace(lineHeight);
+          doc.text(line, x, y);
+          y += lineHeight;
+        }
       }
     };
 
